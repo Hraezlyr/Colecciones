@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TbUbucacion = new System.Windows.Forms.TextBox();
+            this.TbEstado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.FechaFab = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,13 +48,13 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TbUbucacion
+            // TbEstado
             // 
-            this.TbUbucacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbUbucacion.Location = new System.Drawing.Point(128, 237);
-            this.TbUbucacion.Name = "TbUbucacion";
-            this.TbUbucacion.Size = new System.Drawing.Size(244, 23);
-            this.TbUbucacion.TabIndex = 32;
+            this.TbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbEstado.Location = new System.Drawing.Point(128, 237);
+            this.TbEstado.Name = "TbEstado";
+            this.TbEstado.Size = new System.Drawing.Size(244, 23);
+            this.TbEstado.TabIndex = 32;
             // 
             // label7
             // 
@@ -122,6 +122,7 @@
             this.BtGuardarMq.TabIndex = 26;
             this.BtGuardarMq.Text = "Guardar";
             this.BtGuardarMq.UseVisualStyleBackColor = false;
+            this.BtGuardarMq.Click += new System.EventHandler(this.BtGuardarMq_Click);
             // 
             // label4
             // 
@@ -233,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 294);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.TbUbucacion);
+            this.Controls.Add(this.TbEstado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.FechaFab);
             this.Controls.Add(this.label5);
@@ -260,7 +261,7 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox TbUbucacion;
+        public System.Windows.Forms.TextBox TbEstado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker FechaFab;
         private System.Windows.Forms.Label label5;

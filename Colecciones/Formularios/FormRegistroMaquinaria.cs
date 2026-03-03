@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Colecciones.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,9 @@ namespace Colecciones.Formularios
 {
     public partial class FormRegistroMaquinaria : Form
     {
+        Maquinaria[] inventario = new Maquinaria[1];
+        int contador = 0;
+        int contadorID = 1;
         public FormRegistroMaquinaria()
         {
             InitializeComponent();
@@ -31,6 +35,29 @@ namespace Colecciones.Formularios
         private void btnCancelarMq_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtGuardarMq_Click(object sender, EventArgs e)
+        {
+            if (contador < inventario.Length)
+            {
+                inventario[contador] = new Maquinaria(
+                        contadorID,
+                        TbNombre.Text,
+                        TbMarca.Text,
+                        TbModelo.Text,
+                        FechaFab.Value.Year,
+                        TbEstado.Text
+                );
+                TbId.Text = contadorID.ToString();
+                contador++;
+                contadorID++;
+                MessageBox.Show("Maquinaria guardada correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Inventario lleno");
+            }
         }
     }
 }
